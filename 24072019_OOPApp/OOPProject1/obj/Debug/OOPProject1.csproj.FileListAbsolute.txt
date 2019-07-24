@@ -1,0 +1,7 @@
+C:\Users\Section1\source\repos\24072019_OOPApp\OOPProject1\bin\Debug\OOPProject1.exe.config
+C:\Users\Section1\source\repos\24072019_OOPApp\OOPProject1\bin\Debug\OOPProject1.exe
+C:\Users\Section1\source\repos\24072019_OOPApp\OOPProject1\bin\Debug\OOPProject1.pdb
+C:\Users\Section1\source\repos\24072019_OOPApp\OOPProject1\obj\Debug\OOPProject1.csprojAssemblyReference.cache
+C:\Users\Section1\source\repos\24072019_OOPApp\OOPProject1\obj\Debug\OOPProject1.csproj.CoreCompileInputs.cache
+C:\Users\Section1\source\repos\24072019_OOPApp\OOPProject1\obj\Debug\OOPProject1.exe
+C:\Users\Section1\source\repos\24072019_OOPApp\OOPProject1\obj\Debug\OOPProject1.pdb
