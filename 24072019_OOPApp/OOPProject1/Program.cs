@@ -10,45 +10,23 @@ namespace OOPProject1
     {
         static void Main(string[] args)
         {
-        }
-        public abstract class WissenAkademie
-        {
-            public virtual int CalisanMaaslari(string CalisanTipi)
+            Calisanlar cls = new Calisanlar();
+            int maas = cls.CalisanMaaslari("İdari Personel");
+            Console.WriteLine(maas);
+            Console.ReadLine();
+
+            Siniflar snf = new Siniflar();
+            Dictionary<int, string>  dOgrenci = snf.OgrCalListesi("503");
+            foreach (var item in dOgrenci)
             {
-                return 2500;
+                Console.WriteLine("Öğrenci No: " + item.Key + " - " + "Öğrenci Adı: " + item.Value);
             }
-            protected virtual string Demirbaslar()
-            { return "Bilgisayarlar"; }
-            public abstract Dictionary<int, string> OgrenciListesi(Dictionary<int, string> Sinif);
-            private Dictionary<string, string> OgrenciKisiselBilgiler;
-            private Dictionary<string, string> CalisanKisiselBilgiler;
+
+            Console.WriteLine();
+
+            Console.WriteLine("Demirbaşlar: " + snf.DemirbaslarGoster());
+
+            Console.ReadLine();
         }
-        class _503 : WissenAkademie
-        {
-            WissenAkademie x = new _503();
-            
-            public override Dictionary<int, string> OgrenciListesi(Dictionary<int, string> Sinif)
-            {
-                Dictionary<int, string> D503Ogrenciler = new Dictionary<int, string>();
-                return D503Ogrenciler;
-                //  throw new NotImplementedException();
-            }
-        }
-        protected class Calisanlar : WissenAkademie
-        {
-            public override Dictionary<int, string> OgrenciListesi(Dictionary<int, string> Sinif)
-            {
-                throw new NotImplementedException();
-            }
-            private int SaatHesapla() { return 100; }
-            public override int CalisanMaaslari(string CalisanTipi)
-            {
-                if (CalisanTipi == "İdariPersonel")
-                { return 5000; }
-                else
-                { return 7000; }
-            }
-        }
-        
     }
 }

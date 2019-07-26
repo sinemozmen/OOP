@@ -5,3 +5,17 @@ C:\Users\Section1\source\repos\24072019_OOPApp\OOPProject1\obj\Debug\OOPProject1
 C:\Users\Section1\source\repos\24072019_OOPApp\OOPProject1\obj\Debug\OOPProject1.csproj.CoreCompileInputs.cache
 C:\Users\Section1\source\repos\24072019_OOPApp\OOPProject1\obj\Debug\OOPProject1.exe
 C:\Users\Section1\source\repos\24072019_OOPApp\OOPProject1\obj\Debug\OOPProject1.pdb
+C:\Users\Sinem\Desktop\C#-Ders\24072019_OOPApp\OOPProject1\bin\Debug\OOPProject1.exe.config
+C:\Users\Sinem\Desktop\C#-Ders\24072019_OOPApp\OOPProject1\bin\Debug\OOPProject1.exe
+C:\Users\Sinem\Desktop\C#-Ders\24072019_OOPApp\OOPProject1\bin\Debug\OOPProject1.pdb
+C:\Users\Sinem\Desktop\C#-Ders\24072019_OOPApp\OOPProject1\obj\Debug\OOPProject1.csprojAssemblyReference.cache
+C:\Users\Sinem\Desktop\C#-Ders\24072019_OOPApp\OOPProject1\obj\Debug\OOPProject1.csproj.CoreCompileInputs.cache
+C:\Users\Sinem\Desktop\C#-Ders\24072019_OOPApp\OOPProject1\obj\Debug\OOPProject1.exe
+C:\Users\Sinem\Desktop\C#-Ders\24072019_OOPApp\OOPProject1\obj\Debug\OOPProject1.pdb
+E:\24072019_OOPApp\OOPProject1\bin\Debug\OOPProject1.exe.config
+E:\24072019_OOPApp\OOPProject1\bin\Debug\OOPProject1.exe
+E:\24072019_OOPApp\OOPProject1\bin\Debug\OOPProject1.pdb
+E:\24072019_OOPApp\OOPProject1\obj\Debug\OOPProject1.csprojAssemblyReference.cache
+E:\24072019_OOPApp\OOPProject1\obj\Debug\OOPProject1.csproj.CoreCompileInputs.cache
+E:\24072019_OOPApp\OOPProject1\obj\Debug\OOPProject1.exe
+E:\24072019_OOPApp\OOPProject1\obj\Debug\OOPProject1.pdb
