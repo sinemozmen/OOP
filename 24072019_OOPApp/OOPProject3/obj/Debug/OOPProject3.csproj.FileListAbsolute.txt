@@ -1,6 +1,0 @@
-C:\Users\Section1\source\repos\24072019_OOPApp\OOPProject3\bin\Debug\OOPProject3.dll
-C:\Users\Section1\source\repos\24072019_OOPApp\OOPProject3\bin\Debug\OOPProject3.pdb
-C:\Users\Section1\source\repos\24072019_OOPApp\OOPProject3\obj\Debug\OOPProject3.csprojAssemblyReference.cache
-C:\Users\Section1\source\repos\24072019_OOPApp\OOPProject3\obj\Debug\OOPProject3.csproj.CoreCompileInputs.cache
-C:\Users\Section1\source\repos\24072019_OOPApp\OOPProject3\obj\Debug\OOPProject3.dll
-C:\Users\Section1\source\repos\24072019_OOPApp\OOPProject3\obj\Debug\OOPProject3.pdb
