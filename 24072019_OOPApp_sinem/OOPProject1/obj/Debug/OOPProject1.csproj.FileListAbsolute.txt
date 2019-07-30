@@ -19,3 +19,9 @@ E:\24072019_OOPApp\OOPProject1\obj\Debug\OOPProject1.csprojAssemblyReference.cac
 E:\24072019_OOPApp\OOPProject1\obj\Debug\OOPProject1.csproj.CoreCompileInputs.cache
 E:\24072019_OOPApp\OOPProject1\obj\Debug\OOPProject1.exe
 E:\24072019_OOPApp\OOPProject1\obj\Debug\OOPProject1.pdb
+C:\Users\Wissen\Desktop\24072019_OOPApp_sinem\OOPProject1\bin\Debug\OOPProject1.exe.config
+C:\Users\Wissen\Desktop\24072019_OOPApp_sinem\OOPProject1\bin\Debug\OOPProject1.exe
+C:\Users\Wissen\Desktop\24072019_OOPApp_sinem\OOPProject1\bin\Debug\OOPProject1.pdb
+C:\Users\Wissen\Desktop\24072019_OOPApp_sinem\OOPProject1\obj\Debug\OOPProject1.csproj.CoreCompileInputs.cache
+C:\Users\Wissen\Desktop\24072019_OOPApp_sinem\OOPProject1\obj\Debug\OOPProject1.exe
+C:\Users\Wissen\Desktop\24072019_OOPApp_sinem\OOPProject1\obj\Debug\OOPProject1.pdb

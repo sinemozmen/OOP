@@ -58,6 +58,12 @@
     <Compile Include="FormDatay.Designer.cs">
       <DependentUpon>FormDatay.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDegistir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDegistir.Designer.cs">
+      <DependentUpon>FormDegistir.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDatay.resx">
       <DependentUpon>FormDatay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDegistir.resx">
+      <DependentUpon>FormDegistir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEkle.resx">
       <DependentUpon>FormEkle.cs</DependentUpon>

@@ -5,3 +5,9 @@ C:\Users\Section1\source\repos\24072019_OOPApp\OOPProject2\obj\Debug\OOPProject2
 C:\Users\Section1\source\repos\24072019_OOPApp\OOPProject2\obj\Debug\OOPProject2.csproj.CoreCompileInputs.cache
 C:\Users\Section1\source\repos\24072019_OOPApp\OOPProject2\obj\Debug\OOPProject2.exe
 C:\Users\Section1\source\repos\24072019_OOPApp\OOPProject2\obj\Debug\OOPProject2.pdb
+C:\Users\Wissen\Desktop\24072019_OOPApp_sinem\OOPProject2\bin\Debug\OOPProject2.exe.config
+C:\Users\Wissen\Desktop\24072019_OOPApp_sinem\OOPProject2\bin\Debug\OOPProject2.exe
+C:\Users\Wissen\Desktop\24072019_OOPApp_sinem\OOPProject2\bin\Debug\OOPProject2.pdb
+C:\Users\Wissen\Desktop\24072019_OOPApp_sinem\OOPProject2\obj\Debug\OOPProject2.csproj.CoreCompileInputs.cache
+C:\Users\Wissen\Desktop\24072019_OOPApp_sinem\OOPProject2\obj\Debug\OOPProject2.exe
+C:\Users\Wissen\Desktop\24072019_OOPApp_sinem\OOPProject2\obj\Debug\OOPProject2.pdb
