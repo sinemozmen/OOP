@@ -70,6 +70,12 @@
     <Compile Include="FormEkle.Designer.cs">
       <DependentUpon>FormEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLogKayıtları.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogKayıtları.Designer.cs">
+      <DependentUpon>FormLogKayıtları.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ogrenci.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormEkle.resx">
       <DependentUpon>FormEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogKayıtları.resx">
+      <DependentUpon>FormLogKayıtları.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -15,3 +15,9 @@ C:\Users\Wissen\Desktop\24072019_OOPApp_sinem\OOPProject3\bin\Debug\OOPProject3.
 C:\Users\Wissen\Desktop\24072019_OOPApp_sinem\OOPProject3\obj\Debug\OOPProject3.csproj.CoreCompileInputs.cache
 C:\Users\Wissen\Desktop\24072019_OOPApp_sinem\OOPProject3\obj\Debug\OOPProject3.dll
 C:\Users\Wissen\Desktop\24072019_OOPApp_sinem\OOPProject3\obj\Debug\OOPProject3.pdb
+C:\Users\Section2\Desktop\24072019_OOPApp_sinem\OOPProject3\bin\Debug\OOPProject3.dll
+C:\Users\Section2\Desktop\24072019_OOPApp_sinem\OOPProject3\bin\Debug\OOPProject3.pdb
+C:\Users\Section2\Desktop\24072019_OOPApp_sinem\OOPProject3\obj\Debug\OOPProject3.csprojAssemblyReference.cache
+C:\Users\Section2\Desktop\24072019_OOPApp_sinem\OOPProject3\obj\Debug\OOPProject3.csproj.CoreCompileInputs.cache
+C:\Users\Section2\Desktop\24072019_OOPApp_sinem\OOPProject3\obj\Debug\OOPProject3.dll
+C:\Users\Section2\Desktop\24072019_OOPApp_sinem\OOPProject3\obj\Debug\OOPProject3.pdb

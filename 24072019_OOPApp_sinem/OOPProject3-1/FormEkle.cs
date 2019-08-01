@@ -30,6 +30,7 @@ namespace OOPProject3_1
         {
             this.txtID.Text = (enBuyukId + 1).ToString();
              ComboSehirDoldur();
+             this.cmbSehir.SelectedIndex = 0;
         }
         private void ComboSehirDoldur()
         {

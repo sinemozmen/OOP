@@ -36,6 +36,8 @@
             this.btnDegistir = new System.Windows.Forms.Button();
             this.btnCokluSil = new System.Windows.Forms.Button();
             this.btnİslemGeriAl = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnLogKayit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,29 +117,57 @@
             // 
             // btnCokluSil
             // 
+            this.btnCokluSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnCokluSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnCokluSil.Location = new System.Drawing.Point(631, 402);
             this.btnCokluSil.Name = "btnCokluSil";
             this.btnCokluSil.Size = new System.Drawing.Size(75, 31);
             this.btnCokluSil.TabIndex = 6;
             this.btnCokluSil.Text = "Çoklu Sil";
-            this.btnCokluSil.UseVisualStyleBackColor = true;
+            this.btnCokluSil.UseVisualStyleBackColor = false;
             this.btnCokluSil.Click += new System.EventHandler(this.btnCokluSil_Click);
             // 
             // btnİslemGeriAl
             // 
-            this.btnİslemGeriAl.Location = new System.Drawing.Point(748, 42);
+            this.btnİslemGeriAl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnİslemGeriAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnİslemGeriAl.Location = new System.Drawing.Point(749, 42);
             this.btnİslemGeriAl.Name = "btnİslemGeriAl";
-            this.btnİslemGeriAl.Size = new System.Drawing.Size(103, 38);
+            this.btnİslemGeriAl.Size = new System.Drawing.Size(95, 102);
             this.btnİslemGeriAl.TabIndex = 7;
             this.btnİslemGeriAl.Text = "Son İşlemi Geri Al ";
-            this.btnİslemGeriAl.UseVisualStyleBackColor = true;
+            this.btnİslemGeriAl.UseVisualStyleBackColor = false;
             this.btnİslemGeriAl.Click += new System.EventHandler(this.btnİslemGeriAl_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnLogKayit
+            // 
+            this.btnLogKayit.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnLogKayit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnLogKayit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnLogKayit.Location = new System.Drawing.Point(749, 164);
+            this.btnLogKayit.Name = "btnLogKayit";
+            this.btnLogKayit.Size = new System.Drawing.Size(95, 54);
+            this.btnLogKayit.TabIndex = 9;
+            this.btnLogKayit.Text = "Log Kayıtlarını Listele";
+            this.btnLogKayit.UseVisualStyleBackColor = false;
+            this.btnLogKayit.Click += new System.EventHandler(this.btnLogKayit_Click);
             // 
             // AnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(874, 450);
+            this.Controls.Add(this.btnLogKayit);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnİslemGeriAl);
             this.Controls.Add(this.btnCokluSil);
             this.Controls.Add(this.btnDegistir);
@@ -164,6 +194,8 @@
         private System.Windows.Forms.Button btnDegistir;
         private System.Windows.Forms.Button btnCokluSil;
         private System.Windows.Forms.Button btnİslemGeriAl;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLogKayit;
     }
 }
 

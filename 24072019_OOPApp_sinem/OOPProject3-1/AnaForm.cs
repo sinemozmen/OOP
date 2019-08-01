@@ -91,23 +91,48 @@ namespace OOPProject3_1
             else
             {
                 FormDatay frmDet = new FormDatay();
-
                 frmDet.OgrBilgileri = this.seciliOgrBilgileri;
                 frmDet.ShowDialog();
             }
         }
-        private int EnBuyukIDNumarasiniVer()
+        private int EnBuyukIDNumarasiniVer()//data grid viewdaki en büyük adi
         {
-            int enBuyukId = 1;
-            int tmpId = 1;
+            int enBuyukId = 0;
+            int tmpId = 0;
+            int enBuyukIdLst = 0;
+            int tmpIdLst = 0;
             foreach (DataGridViewRow row in this.dataGridView1.Rows)
             {
                 tmpId = (int)row.Cells[0].Value;
                 if (tmpId > enBuyukId)
                 enBuyukId = tmpId;
             }
-            
-            return enBuyukId;
+            foreach (KeyValuePair<string, Ogrenci> item in sonIslemlerDictionary)
+            {
+                
+
+                List<int> idList = new List<int>();
+              
+                String sKey = item.Key;
+                string sId = "";
+
+                if (sKey.Contains("Add"))
+                {
+                    sId = sKey.Substring(3, sKey.Length - 3);
+                }
+                if (sKey.Contains("Delete")|| sKey.Contains("Change"))
+                {
+                    sId = sKey.Substring(6, sKey.Length - 6);
+                }
+                    idList.Add(Convert.ToInt32(sId));
+                if (Convert.ToInt32(sId) > enBuyukIdLst)
+                    enBuyukIdLst = Convert.ToInt32(sId);
+
+            }
+            if (enBuyukId > enBuyukIdLst)
+                return enBuyukId;
+            else
+                return enBuyukIdLst;
         }
         private void btnEkle_Click(object sender, EventArgs e)
         {
@@ -127,11 +152,12 @@ namespace OOPProject3_1
             if (dataGridView1.RowCount > 0)
                 ogrList = (List<Ogrenci>)dataGridView1.DataSource;
 
-                sonIslemlerDictionary.Add(frmEkle.yeniOgrBilgileri.Id.ToString(), frmEkle.yeniOgrBilgileri);
+                sonIslemlerDictionary.Add("Add"+frmEkle.yeniOgrBilgileri.Id, frmEkle.yeniOgrBilgileri);
 
                 ogrList.Add(frmEkle.yeniOgrBilgileri);
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = ogrList;
+            btnİslemGeriAl.Enabled = true;
         }
 
         private void AnaForm_Load(object sender, EventArgs e)
@@ -154,11 +180,11 @@ namespace OOPProject3_1
             //}
             //2.YOL 
             //Cell isimleri verilerek  Cell'e ulaşmak 
-
+            
             seciliOgrBilgileri.Id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Id"].Value);
-            seciliOgrBilgileri.Ad = dataGridView1.CurrentRow.Cells["Ad"].Value.ToString();
-            seciliOgrBilgileri.Soyad = dataGridView1.CurrentRow.Cells["Soyad"].Value.ToString();
-            seciliOgrBilgileri.DogumYeri = dataGridView1.CurrentRow.Cells["DogumYeri"].Value.ToString();
+            seciliOgrBilgileri.Ad =Convert.ToString(dataGridView1.CurrentRow.Cells["Ad"].Value);
+            seciliOgrBilgileri.Soyad = Convert.ToString(dataGridView1.CurrentRow.Cells["Soyad"].Value);
+            seciliOgrBilgileri.DogumYeri = Convert.ToString(dataGridView1.CurrentRow.Cells["DogumYeri"].Value);
             seciliOgrBilgileri.DogumTarih = Convert.ToDateTime(dataGridView1.CurrentRow.Cells["DogumTarih"].Value);
             seciliOgrBilgileri.KursBitisTarih = Convert.ToDateTime(dataGridView1.CurrentRow.Cells["KursBitisTarih"].Value);
 
@@ -168,8 +194,13 @@ namespace OOPProject3_1
         {
             FormDegistir frmDegistir = new FormDegistir();
             frmDegistir.ogrFormDegistir = seciliOgrBilgileri;
+            string s = "Change" + frmDegistir.ogrFormDegistir.Id;
 
-            sonIslemlerDictionary.Add("Change", frmDegistir.ogrFormDegistir);
+            if(sonIslemlerDictionary.Keys.Contains(s)==false)
+            {
+                sonIslemlerDictionary.Add(s, frmDegistir.ogrFormDegistir);
+            }
+
 
             frmDegistir.ShowDialog();
             //Aşağıdaki koda Hide() edildikten sonra girecek.
@@ -182,6 +213,7 @@ namespace OOPProject3_1
             dataGridView1.CurrentRow.Cells[3].Value = this.seciliOgrBilgileri.DogumYeri;
             dataGridView1.CurrentRow.Cells[4].Value = this.seciliOgrBilgileri.DogumTarih;
             dataGridView1.CurrentRow.Cells[5].Value = this.seciliOgrBilgileri.KursBitisTarih;
+            btnİslemGeriAl.Enabled = true;
 
         }
 
@@ -200,12 +232,14 @@ namespace OOPProject3_1
 
                     Ogrenci ogrTmp = ogrList[dataGridView1.CurrentRow.Index];
                     //sonSilmeListesi.Add(ogrTmp);
-                    sonIslemlerDictionary.Add("Delete", ogrTmp);
+                    sonIslemlerDictionary.Add("Delete"+ogrTmp.Id, ogrTmp);
 
                     ogrList.RemoveAt(dataGridView1.CurrentRow.Index);
                     dataGridView1.DataSource = null;
                     dataGridView1.DataSource = ogrList;
                     btnİslemGeriAl.Enabled = true;
+                    foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                        row.Selected = false;
                 }
 
             }else
@@ -224,13 +258,13 @@ namespace OOPProject3_1
             {
                 Ogrenci ogrTmp = ogrList[item.Index];
                 //sonSilmeListesi.Add(ogrTmp)
-                sonIslemlerDictionary.Add("Delete", ogrTmp);
+                sonIslemlerDictionary.Add("Delete"+ogrTmp.Id, ogrTmp);
                 ogrList.RemoveAt(item.Index);
             }
 
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = ogrList;
-            btnİslemGeriAl.Enabled = false;
+            btnİslemGeriAl.Enabled = true;
         }
 
         private void btnİslemGeriAl_Click(object sender, EventArgs e)
@@ -245,28 +279,60 @@ namespace OOPProject3_1
                     if (dataGridView1.RowCount > 0)
                         ogrList = (List<Ogrenci>)dataGridView1.DataSource;
                     // ogrList.Add(item);//--silme geri alması için yazılmıştı
-                    if (item.Key == "Add")
-                    {
-                       // ogrList.RemoveAt();
+                    String sKey = item.Key;
+                    string sId = "";
 
+                    if (sKey.Contains("Add"))
+                    {
+                        sId= sKey.Substring(3, sKey.Length - 3);
+                        foreach (Ogrenci item2 in ogrList)
+                        {
+                            if (item2.Id == Convert.ToInt32(sId))
+                            {
+                                int ogrIndex = ogrList.IndexOf(item2);
+                                ogrList.RemoveAt(ogrIndex);
+                                break;
+                            }
+                        }
                     }
-                    else if(item.Key =="Delete")
-                    {
 
+                   if(sKey.Contains("Delete"))
+                    {
                         ogrList.Add(item.Value);
-                    }//Change
-                    {
+                    }
 
+                    if (sKey.Contains("Change"))
+                    {
+                        sId = sKey.Substring(6, sKey.Length - 6);
                         //ogrList.RemoveAt();??
+                        foreach (Ogrenci item2 in ogrList)
+                        {
+                            if (item2.Id == Convert.ToInt32(sId))
+                            {
+                                int ogrIndex = ogrList.IndexOf(item2);
+                                ogrList.RemoveAt(ogrIndex);
+                                break;
+                            }
+                        }
                         ogrList.Add(item.Value);
                     }
                 }
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = ogrList;
                 btnİslemGeriAl.Enabled = false;
+
+
                 //sonSilmeListesi.Clear();//silme için eklendi
                 sonIslemlerDictionary.Clear();
             }
+        }
+
+        private void btnLogKayit_Click(object sender, EventArgs e)
+        {
+            FormLogKayıtları frmLogKayit = new FormLogKayıtları(sonIslemlerDictionary);
+           // frmLogKayit.sonLogDic = this.sonIslemlerDictionary;
+            frmLogKayit.ShowDialog();
+
         }
     }
 }
