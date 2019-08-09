@@ -30,13 +30,12 @@ namespace OOPProject3_1
         {
             this.txtID.Text = (enBuyukId + 1).ToString();
              ComboSehirDoldur();
-             this.cmbSehir.SelectedIndex = 0;
         }
         private void ComboSehirDoldur()
         {
-            BAU sourceOfData = new BAU();
+           // BAU sourceOfData = new BAU();
             this.cmbSehir.Items.Clear();
-            foreach (string item in sourceOfData.SehirlerArray)
+            foreach (string item in BAU.SehirlerArray)
             {
                 this.cmbSehir.Items.Add(item);
             }

@@ -1,0 +1,11 @@
+C:\Users\Section2\Documents\24072019_OOPApp_sinem\Sil2\bin\Debug\netcoreapp2.1\Sil2.deps.json
+C:\Users\Section2\Documents\24072019_OOPApp_sinem\Sil2\bin\Debug\netcoreapp2.1\Sil2.runtimeconfig.json
+C:\Users\Section2\Documents\24072019_OOPApp_sinem\Sil2\bin\Debug\netcoreapp2.1\Sil2.runtimeconfig.dev.json
+C:\Users\Section2\Documents\24072019_OOPApp_sinem\Sil2\bin\Debug\netcoreapp2.1\Sil2.dll
+C:\Users\Section2\Documents\24072019_OOPApp_sinem\Sil2\bin\Debug\netcoreapp2.1\Sil2.pdb
+C:\Users\Section2\Documents\24072019_OOPApp_sinem\Sil2\obj\Debug\netcoreapp2.1\Sil2.csprojAssemblyReference.cache
+C:\Users\Section2\Documents\24072019_OOPApp_sinem\Sil2\obj\Debug\netcoreapp2.1\Sil2.csproj.CoreCompileInputs.cache
+C:\Users\Section2\Documents\24072019_OOPApp_sinem\Sil2\obj\Debug\netcoreapp2.1\Sil2.AssemblyInfoInputs.cache
+C:\Users\Section2\Documents\24072019_OOPApp_sinem\Sil2\obj\Debug\netcoreapp2.1\Sil2.AssemblyInfo.cs
+C:\Users\Section2\Documents\24072019_OOPApp_sinem\Sil2\obj\Debug\netcoreapp2.1\Sil2.dll
+C:\Users\Section2\Documents\24072019_OOPApp_sinem\Sil2\obj\Debug\netcoreapp2.1\Sil2.pdb

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOPProject3;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,10 +20,6 @@ namespace OOPProject3_1
             InitializeComponent();
         }
         
-        
-            
-        
-
         private void FormDatay_Load(object sender, EventArgs e)
         {
             timer1.Interval =100;
@@ -32,30 +29,28 @@ namespace OOPProject3_1
             this.txtAdi.Text = OgrBilgileri.Ad;
             this.txtSoyadi.Text =OgrBilgileri.Soyad;
             this.cmbDogumYeri.Text = OgrBilgileri.DogumYeri;
-            int yilFarki = DateTime.Now.Year - OgrBilgileri.DogumTarih.Year;
-            this.txtYas.Text = yilFarki.ToString();
-
-            double gunFarki = (DateTime.Now - OgrBilgileri.DogumTarih).TotalDays;
-            this.txtToplamGun.Text = gunFarki.ToString();
-
-            double saatFarki = (DateTime.Now - OgrBilgileri.DogumTarih).TotalHours;
-            this.txtToplamSaat.Text = saatFarki.ToString();
-
-            double dakikaFarki = (DateTime.Now - OgrBilgileri.DogumTarih).TotalSeconds;
-            this.txtToplamDakika.Text = dakikaFarki.ToString();
-
-            double saniyeFarki = (DateTime.Now - OgrBilgileri.DogumTarih).TotalMinutes;
-            this.txtToplamSaniye.Text = saniyeFarki.ToString();
-
-            double miliSaniyeFarki = (DateTime.Now - OgrBilgileri.DogumTarih).TotalMilliseconds;
-            this.txtToplamMilisaniye.Text = miliSaniyeFarki.ToString();
 
 
+            LifeDurationInfo lfdur = BAU.GetLifeDurations(OgrBilgileri.DogumTarih);
 
-
-
-
-
+            int yilFarki = lfdur.calculatedAge;
+            //int yilFarki = DateTime.Now.Year - OgrBilgileri.DogumTarih.Year;
+            //this.txtYas.Text = yilFarki.ToString();
+            double gunFarki = lfdur.calculatedDays;
+            //double gunFarki = (DateTime.Now - OgrBilgileri.DogumTarih).TotalDays;
+            //this.txtToplamGun.Text = gunFarki.ToString();
+            double saatFarki = lfdur.calculatedHours;
+            //double saatFarki = (DateTime.Now - OgrBilgileri.DogumTarih).TotalHours;
+            //this.txtToplamSaat.Text = saatFarki.ToString();
+            double dakikaFarki = lfdur.calculatedSeconds;
+            //double dakikaFarki = (DateTime.Now - OgrBilgileri.DogumTarih).TotalSeconds;
+            //this.txtToplamDakika.Text = dakikaFarki.ToString();
+            double saniyeFarki = lfdur.calculatedSeconds;
+            //double saniyeFarki = (DateTime.Now - OgrBilgileri.DogumTarih).TotalMinutes;
+            //this.txtToplamSaniye.Text = saniyeFarki.ToString();
+            double miliSaniyeFarki = lfdur.calculatedMiliseconds;
+            //double miliSaniyeFarki = (DateTime.Now - OgrBilgileri.DogumTarih).TotalMilliseconds;
+            //this.txtToplamMilisaniye.Text = miliSaniyeFarki.ToString();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

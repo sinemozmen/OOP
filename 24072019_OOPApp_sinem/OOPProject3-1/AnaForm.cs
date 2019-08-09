@@ -31,8 +31,6 @@ namespace OOPProject3_1
         public AnaForm()
         {
             InitializeComponent();
-
-
         }
 
         public void buttonUretveDoldur_Click(object sender, EventArgs e)
@@ -66,14 +64,14 @@ namespace OOPProject3_1
                 //3.YOL : İsimleri Proje3'te BAU'daki dataları çekerek random doldurma :
                 Ogrenci ogr = new Ogrenci();
 
-                BAU sourceOfData = new BAU();
+               // BAU sourceOfData = new BAU();
 
                 ogr.Id = i;
-                ogr.Ad = sourceOfData.GetName();
-                ogr.Soyad = sourceOfData.GetSurname();
-                ogr.DogumYeri = sourceOfData.GetCity();
-                ogr.DogumTarih = sourceOfData.GetBackDate(30);
-                ogr.KursBitisTarih = sourceOfData.GetForwardDate(5);
+                ogr.Ad = BAU.GetName();
+                ogr.Soyad = BAU.GetSurname();
+                ogr.DogumYeri = BAU.GetCity();
+                ogr.DogumTarih = BAU.GetBackDate(30);
+                ogr.KursBitisTarih = BAU.GetForwardDate(5);
                 olist.Add(ogr);
             }
             dataGridView1.DataSource = null;
@@ -91,48 +89,23 @@ namespace OOPProject3_1
             else
             {
                 FormDatay frmDet = new FormDatay();
+
                 frmDet.OgrBilgileri = this.seciliOgrBilgileri;
                 frmDet.ShowDialog();
             }
         }
-        private int EnBuyukIDNumarasiniVer()//data grid viewdaki en büyük adi
+        private int EnBuyukIDNumarasiniVer()
         {
-            int enBuyukId = 0;
-            int tmpId = 0;
-            int enBuyukIdLst = 0;
-            int tmpIdLst = 0;
+            int enBuyukId = 1;
+            int tmpId = 1;
             foreach (DataGridViewRow row in this.dataGridView1.Rows)
             {
                 tmpId = (int)row.Cells[0].Value;
                 if (tmpId > enBuyukId)
                 enBuyukId = tmpId;
             }
-            foreach (KeyValuePair<string, Ogrenci> item in sonIslemlerDictionary)
-            {
-                
-
-                List<int> idList = new List<int>();
-              
-                String sKey = item.Key;
-                string sId = "";
-
-                if (sKey.Contains("Add"))
-                {
-                    sId = sKey.Substring(3, sKey.Length - 3);
-                }
-                if (sKey.Contains("Delete")|| sKey.Contains("Change"))
-                {
-                    sId = sKey.Substring(6, sKey.Length - 6);
-                }
-                    idList.Add(Convert.ToInt32(sId));
-                if (Convert.ToInt32(sId) > enBuyukIdLst)
-                    enBuyukIdLst = Convert.ToInt32(sId);
-
-            }
-            if (enBuyukId > enBuyukIdLst)
-                return enBuyukId;
-            else
-                return enBuyukIdLst;
+            
+            return enBuyukId;
         }
         private void btnEkle_Click(object sender, EventArgs e)
         {
@@ -180,11 +153,11 @@ namespace OOPProject3_1
             //}
             //2.YOL 
             //Cell isimleri verilerek  Cell'e ulaşmak 
-            
+
             seciliOgrBilgileri.Id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Id"].Value);
-            seciliOgrBilgileri.Ad =Convert.ToString(dataGridView1.CurrentRow.Cells["Ad"].Value);
-            seciliOgrBilgileri.Soyad = Convert.ToString(dataGridView1.CurrentRow.Cells["Soyad"].Value);
-            seciliOgrBilgileri.DogumYeri = Convert.ToString(dataGridView1.CurrentRow.Cells["DogumYeri"].Value);
+            seciliOgrBilgileri.Ad = dataGridView1.CurrentRow.Cells["Ad"].Value.ToString();
+            seciliOgrBilgileri.Soyad = dataGridView1.CurrentRow.Cells["Soyad"].Value.ToString();
+            seciliOgrBilgileri.DogumYeri = dataGridView1.CurrentRow.Cells["DogumYeri"].Value.ToString();
             seciliOgrBilgileri.DogumTarih = Convert.ToDateTime(dataGridView1.CurrentRow.Cells["DogumTarih"].Value);
             seciliOgrBilgileri.KursBitisTarih = Convert.ToDateTime(dataGridView1.CurrentRow.Cells["KursBitisTarih"].Value);
 
@@ -194,13 +167,8 @@ namespace OOPProject3_1
         {
             FormDegistir frmDegistir = new FormDegistir();
             frmDegistir.ogrFormDegistir = seciliOgrBilgileri;
-            string s = "Change" + frmDegistir.ogrFormDegistir.Id;
 
-            if(sonIslemlerDictionary.Keys.Contains(s)==false)
-            {
-                sonIslemlerDictionary.Add(s, frmDegistir.ogrFormDegistir);
-            }
-
+            sonIslemlerDictionary.Add("Change", frmDegistir.ogrFormDegistir);
 
             frmDegistir.ShowDialog();
             //Aşağıdaki koda Hide() edildikten sonra girecek.
@@ -218,8 +186,8 @@ namespace OOPProject3_1
         }
 
         private void btnSil_Click(object sender, EventArgs e)
-        {     //Data gridviewda seçilen satırı sildirme
-        
+        {   
+            //Data gridviewda seçilen satırı sildirme
 
             DialogResult dr = MessageBox.Show("Seçilen satırı silmek istediğinize emin misiniz ?",
             "UYARI!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -229,26 +197,19 @@ namespace OOPProject3_1
                 if (dataGridView1.SelectedRows.Count > 0)
                 {
                     ogrList = (List<Ogrenci>)dataGridView1.DataSource;
-
                     Ogrenci ogrTmp = ogrList[dataGridView1.CurrentRow.Index];
                     //sonSilmeListesi.Add(ogrTmp);
                     sonIslemlerDictionary.Add("Delete"+ogrTmp.Id, ogrTmp);
-
                     ogrList.RemoveAt(dataGridView1.CurrentRow.Index);
                     dataGridView1.DataSource = null;
                     dataGridView1.DataSource = ogrList;
                     btnİslemGeriAl.Enabled = true;
-                    foreach (DataGridViewRow row in dataGridView1.SelectedRows)
-                        row.Selected = false;
                 }
-
             }else
             {
                 return;
             }
-           
         }
-
         private void btnCokluSil_Click(object sender, EventArgs e)
         {
             List<Ogrenci> ogrList = new List<Ogrenci>();
@@ -261,10 +222,9 @@ namespace OOPProject3_1
                 sonIslemlerDictionary.Add("Delete"+ogrTmp.Id, ogrTmp);
                 ogrList.RemoveAt(item.Index);
             }
-
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = ogrList;
-            btnİslemGeriAl.Enabled = true;
+            btnİslemGeriAl.Enabled = false;
         }
 
         private void btnİslemGeriAl_Click(object sender, EventArgs e)
@@ -320,8 +280,6 @@ namespace OOPProject3_1
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = ogrList;
                 btnİslemGeriAl.Enabled = false;
-
-
                 //sonSilmeListesi.Clear();//silme için eklendi
                 sonIslemlerDictionary.Clear();
             }
@@ -332,7 +290,6 @@ namespace OOPProject3_1
             FormLogKayıtları frmLogKayit = new FormLogKayıtları(sonIslemlerDictionary);
            // frmLogKayit.sonLogDic = this.sonIslemlerDictionary;
             frmLogKayit.ShowDialog();
-
         }
     }
 }

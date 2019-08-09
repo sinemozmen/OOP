@@ -1,0 +1,7 @@
+C:\Users\Sinem\Desktop\C#-Ders\24072019_OOPApp_sinem\Ornekler\bin\Debug\Ornekler.exe.config
+C:\Users\Sinem\Desktop\C#-Ders\24072019_OOPApp_sinem\Ornekler\bin\Debug\Ornekler.exe
+C:\Users\Sinem\Desktop\C#-Ders\24072019_OOPApp_sinem\Ornekler\bin\Debug\Ornekler.pdb
+C:\Users\Sinem\Desktop\C#-Ders\24072019_OOPApp_sinem\Ornekler\obj\Debug\Ornekler.csprojAssemblyReference.cache
+C:\Users\Sinem\Desktop\C#-Ders\24072019_OOPApp_sinem\Ornekler\obj\Debug\Ornekler.csproj.CoreCompileInputs.cache
+C:\Users\Sinem\Desktop\C#-Ders\24072019_OOPApp_sinem\Ornekler\obj\Debug\Ornekler.exe
+C:\Users\Sinem\Desktop\C#-Ders\24072019_OOPApp_sinem\Ornekler\obj\Debug\Ornekler.pdb

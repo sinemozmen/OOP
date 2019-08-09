@@ -1,0 +1,59 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Sinem\\Desktop\\C#-Ders\\24072019_OOPApp_sinem\\Sil2\\Sil2.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Sinem\\Desktop\\C#-Ders\\24072019_OOPApp_sinem\\Sil2\\Sil2.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Sinem\\Desktop\\C#-Ders\\24072019_OOPApp_sinem\\Sil2\\Sil2.csproj",
+        "projectName": "Sil2",
+        "projectPath": "C:\\Users\\Sinem\\Desktop\\C#-Ders\\24072019_OOPApp_sinem\\Sil2\\Sil2.csproj",
+        "packagesPath": "C:\\Users\\Sinem\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sinem\\Desktop\\C#-Ders\\24072019_OOPApp_sinem\\Sil2\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Sinem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

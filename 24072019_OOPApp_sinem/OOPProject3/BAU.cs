@@ -9,10 +9,10 @@ namespace OOPProject3
     public class BAU
     {//Bu class veri üretmek için hazırlanmıştır.
 
-        string[] Adlar = { "Şamil", "Cemal", "Ali", "Murat", "Kemal", "Şahin", "Hüseyin" };
-        string[] Soyadlar = { "Yıldız", "Erkmen", "Kahraman", "Erdemir" };
-        string[] Sehirler = { "Ankara", "İstanbul", "İzmir", "Eskişehir", "Adana","Konya","Uşak","Denizli"};
-        public string[] SehirlerArray
+       static string[] Adlar = { "Şamil", "Cemal", "Ali", "Murat", "Kemal", "Şahin", "Hüseyin" };
+        static string[] Soyadlar = { "Yıldız", "Erkmen", "Kahraman", "Erdemir" };
+        static string[] Sehirler = { "Ankara", "İstanbul", "İzmir", "Eskişehir", "Adana","Konya","Uşak","Denizli"};
+        public static string[] SehirlerArray
         {
             get
             {
@@ -23,34 +23,34 @@ namespace OOPProject3
 
         static Random rnd = new Random();
 
-        public string GetName()
+        public static  string GetName()
         {
             int rndIndex = rnd.Next(0, Adlar.Length);
             return Adlar[rndIndex];
         }
-        public string GetSurname()
+        public static string GetSurname()
         {
             int sayi = rnd.Next(0, Soyadlar.Length);
             return Soyadlar[sayi];
         }
-        public string GetCity()
+        public static string GetCity()
         {
             int sayi2 = rnd.Next(0, Sehirler.Length);
             return Sehirler[sayi2];
         }
-        public DateTime GetBackDate(int year)
+        public static DateTime GetBackDate(int year)
         {
             int randomYil = rnd.Next(0, year);
             DateTime myDate = DateTime.Now;
             DateTime newDate = myDate.AddYears(-randomYil);
             return newDate;
         }
-        public DateTime GetForwardDate(int year)
+        public static DateTime GetForwardDate(int year)
         {
             int randomYil = rnd.Next(0, year);
             return DateTime.Now.AddYears(randomYil);
         }
-        public LifeDurationInfo GetLifeDurations(DateTime birthDate)
+        public static LifeDurationInfo GetLifeDurations(DateTime birthDate)
         {
             LifeDurationInfo lfd = new LifeDurationInfo();
 

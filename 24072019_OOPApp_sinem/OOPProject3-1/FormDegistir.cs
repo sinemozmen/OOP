@@ -1,5 +1,4 @@
-﻿using OOPProject3;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,19 +18,9 @@ namespace OOPProject3_1
         {
             InitializeComponent();
         }
-        private void ComboSehirDoldur()
-        {
-            BAU sourceOfData = new BAU();
-            this.cmbSehir.Items.Clear();
-            foreach (string item in sourceOfData.SehirlerArray)
-            {
-                this.cmbSehir.Items.Add(item);
-            }
-        }
 
         private void FormDegistir_Load(object sender, EventArgs e)
         {
-            ComboSehirDoldur();
             this.txtId.Text=ogrFormDegistir.Id.ToString();
             this.txtAd.Text = ogrFormDegistir.Ad;
             this.txtSoyad.Text = ogrFormDegistir.Soyad;
@@ -40,7 +29,6 @@ namespace OOPProject3_1
             this.dateTimePickerKursBitis.Value = Convert.ToDateTime(ogrFormDegistir.KursBitisTarih);
 
         }
-
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
